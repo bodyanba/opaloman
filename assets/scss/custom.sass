@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css?family=Almarai:400,700|Montserrat:400,700&display=swap')
+
+$color-body: #554645
+$color-btn: #966a50
+$color-link: #d3b5a0
+$color-border: #d9cec7
+$color-hover: #d7c7be
+$color-bg: #f4f0ed
+$color-gray: rgba(85, 70, 69, 0.5)
+
+\:root
+	--color-primary: #966a50
+	// --color-secondary:#ff6363
+	// --color-tertiary:#ac1de1
+	// --color-gradient-start:#554645
+	// --color-gradient-stop:#966a50
+	// --color-gradient-start-secondary:#0bccee
+	// --color-gradient-stop-secondary:#ac1de1
+	// --color-gradient-start-tertiary:#ffba83
+	// --color-gradient-stop-tertiary:#ffa5cd
+
+*
+	outline: none !important
+
+body
+	font-family: 'Montserrat', 'Almarai', sans-serif
+	font-size: 16px
+	line-height: 1.9em
+	color: $color-body
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6 .h6
+	font-family: 'Montserrat', 'Almarai', sans-serif
+	color: $color-btn
+.h1, h1
+	font-size: 50px
+.h2, h2
+	font-size: 44px
+	letter-spacing: 0
+.h3, h3
+	font-size: 32px
+.h4, h4
+	font-size: 26px
+.h5, h5
+	font-size: 20px
+.h6, h6
+	font-size: 18px
+
+.main-header .social-icon
+	font-size: 17px
+	&:not([class*=scheme-]) a
+		color: rgba(255, 255, 255, 0.7)
+
+.main-nav > li > a
+	color: rgba(255, 255, 255, 0.7)
+
+.main-header .social-icon:not([class*=scheme-]) a:hover
+	color: #fff
+
+.main-nav > li
+	> a
+		font-size: 17px
+		font-weight: 500
+		letter-spacing: 0.02em
+		&:hover
+			color: #fff
+	&.is-active > a, &.current-menu-item > a, &:hover > a, > a:hover
+		color: #fff
+
+.nav-light .main-nav > li > a
+	color: rgba(255, 255, 255, 0.75)
+	.link-ext
+		background-color: #fff
+
+.nav-dark .main-nav > li
+	> a
+		color: rgba(0, 0, 0, 0.75)
+	&.is-active > a, &.current-menu-item > a, &:hover > a, > a:hover
+		color: #000
+
+.main-footer
+	color: $color-link
+	a:not(.btn)
+		color: $color-link
+		&:hover
+			color: #fff
+
+.text-black
+	color: $color-body !important
+
+.liquid-blog-scheme-dark
+	color: $color-body
+
+.text-hover-black:hover
+	color: $color-body !important
+
+.bg-charade
+	background: $color-body !important
+.bg-light
+	background: $color-bg !important
+.bg-dark
+	background: $color-btn !important
+
+.liquid-parallax-container, .liquid-parallax-figure
+	background-position: center center !important
+
+// .row-bg-loader
+// 	width: 100%
+// 	height: 100%
+// 	top: 0
+// 	left: 0
+// 	margin-top: 0
+// 	margin-left: 0
+// 	background-color: #fff
+// 	z-index: 999
+
+@media (min-width: 1200px)
+	.main-header .is-stuck
+		background: #fff !important
+
+	.mainbar-wrap.is-stuck
+		.social-icon a, .header-module .ld-module-trigger, .main-nav > li > a, .ld-module-search-visible-form .ld-search-form input
+			color: $color-btn !important
+		.social-icon a:hover, .main-nav > li > a:hover
+			color: $color-hover !important
+
+	.megamenu .lqd-custom-menu 
+		text-align: center
+		li 
+			display: inline-block
+			margin-bottom: 0
+			+ li 
+				margin-left: 15px
+		a
+			color: $color-btn
+			&:hover
+				color: $color-hover
+
+	.main-header[data-react-to-megamenu=true].megamenu-scheme-light .mainbar-wrap:not(.is-stuck) 
+		.header-module .ld-module-trigger, .main-nav > li > a,  .social-icon a
+			color: $color-btn !important
+			&:hover
+				color: $color-hover !important
+
+@media (max-width: 1199px)
+	.main-header .navbar-brand
+		padding: 20px 0
+
+	[data-mobile-nav-trigger-alignment=right] .navbar-header .navbar-brand-inner
+		margin-right: -90px !important
+
+	[data-mobile-nav-style=modern]:before
+		background-image: linear-gradient(to top left, $color-btn 0%, $color-body 100%)
+
+.section-1
+	padding-top: 403px
+	padding-bottom: 678px
+
+.figure 
+	border-width: 13px
+	color: $color-btn
+	position: absolute
+	pointer-events: none
+
+.figure-wrap
+	pointer-events: none
+	position: absolute
+	width: 1500px
+	right: 50%
+	transform: translate(50%)
+	z-index: 1
+	&-1
+		top: 0
+		bottom: 0
+		.figure
+			&-1
+				width: 25.8%
+				height: 123px
+				right: 74.2%
+				bottom: 0
+				border-top-style: solid
+				border-right-style: solid
+			&-2
+				width: 44.8%
+				height: 123px
+				right: 14.7%
+				bottom: 0
+				border-top-style: solid
+				border-right-style: solid
+			&-3
+				height: 32.4%
+				right: 0
+				bottom: 0
+				border-right-style: solid
+			&-4
+				height: 17.4%
+				right: 58.6%
+				bottom: 123px
+				border-right-style: solid
+	&-2
+		height: 330px
+		top: 0
+		.figure
+			&-1
+				height: 114px
+				top: 0
+				right: 74.2%
+				border-right-style: solid
+			&-2
+				width: 75%
+				top: 0
+				right: 14.7%
+				bottom: 0
+				border-bottom-style: solid
+				border-right-style: solid
+			&-3
+				top: 0
+				right: 0
+				bottom: 0
+				border-right-style: solid
+			&-4
+				height: 233px
+				right: 88.8%
+				bottom: 0
+				border-right-style: solid
+			&-5
+				width: 30.2%
+				height: 110px
+				top: 0
+				right: 29.3%
+				border-bottom-style: solid
+	&-3
+		height: 453px
+		bottom: 172px
+		.figure
+			bottom: 0
+			&-1
+				top: 0
+				right: 88.8%
+				border-right-style: solid
+			&-2
+				top: 0
+				right: 74.2%
+				border-right-style: solid
+			&-3
+				top: 0
+				right: 14.7%
+				border-right-style: solid
+			&-4
+				top: 0
+				right: 0
+				border-right-style: solid
+			&-5
+				width: 15%
+				height: 51.5%
+				right: 15.2%
+				border-top-style: solid
+				border-bottom-style: solid
+				border-left-style: solid
+			&-6
+				width: 15%
+				height: 51.5%
+				right: 29.8%
+				border-top-style: solid
+				border-bottom-style: solid
+				border-left-style: solid
+			&-7
+				width: 15%
+				height: 51.5%
+				right: 44.5%
+				border-top-style: solid
+				border-bottom-style: solid
+				border-left-style: solid
+
+.iconbox-1
+	margin-bottom: 0
+	.iconbox-icon-container
+		margin-bottom: 0
+		width: 100%
+		max-width: 1500px
+		flex-grow: 1
+		> svg 
+			width: 100%
+			height: auto
+
+.iconbox-2
+	margin-top: -265px
+	margin-bottom: 70px
+
+.iconbox-3
+	margin-top: 50px
+
+.section-2
+	padding-top: 1px
+	padding-bottom: 170px
+
+
+
